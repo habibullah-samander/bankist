@@ -1,0 +1,875 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #444;
+  background-color: #f3f3f3;
+  height: 100vh;
+  padding: 0;
+}
+
+/* Sticky Navbar */
+#navbar {
+  min-width: 100vw;
+  border-bottom: 3px solid #e8491d;
+  padding: 0;
+  margin: 0;
+  /* background: #35424a; */
+  background-image: linear-gradient(to top left, #39b385, #9be15d);
+  color: #fff;
+}
+#navbar .container {
+  margin: 0 auto;
+  padding: 1rem 1rem;
+  width: 110rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#navbar .container .logo-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.container .logo {
+  margin: 0;
+}
+
+#navbar h1 {
+  margin: 0;
+  margin-left: 1rem;
+  padding: 0;
+  font-size: 2rem;
+}
+
+#navbar ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#navbar ul li a {
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+}
+#navbar ul li a:hover {
+  font-weight: bold;
+  color: #e8491d;
+}
+#navbar .current a {
+  color: #e8491d;
+  font-weight: bold;
+}
+
+/* Carousel */
+
+.carousel {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  height: 530px;
+  width: 500px;
+  overflow: hidden;
+  margin: 1rem auto;
+}
+
+.carousel .images-container {
+  display: flex;
+  transform: translateX(0);
+  transition: transform 0.5s ease-in-out;
+}
+.buttons-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.carousel img {
+  height: 50rem;
+  width: 50rem;
+  object-fit: cover;
+}
+
+.carousel .btn {
+  background-color: rebeccapurple;
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 0.1rem;
+}
+
+.carousel .btn:hover {
+  opacity: 0.9;
+}
+
+.carousel .btn:focus {
+  outline: none;
+}
+/*  */
+
+/* Log in */
+nav {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 110rem;
+  margin: 0 auto;
+}
+nav .nav-content {
+  width: 30rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.info-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome {
+  font-size: 1.9rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+.logo {
+  height: 5.25rem;
+  width: 5.25rem;
+  align-self: center;
+  margin-bottom: 1rem;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  transition: all 1.5s ease-out;
+}
+.login > * {
+  width: 100%;
+}
+
+.login .label-validation {
+  color: orangered;
+  font-size: 1.1rem;
+  height: 1.1rem;
+}
+
+.login__input {
+  border: none;
+  padding: 0.5rem 2rem;
+  font-size: 1.6rem;
+  font-family: inherit;
+  text-align: center;
+  border-radius: 10rem;
+  margin: 1rem 0 0.5rem;
+  border: 1px solid #fff;
+  transition: all 0.3s;
+}
+
+/* if the login input has the class .border-red */
+.login__input.border-red {
+  border: 1px solid red;
+}
+
+.login__input:focus {
+  outline: none;
+  border: 1px solid #ccc;
+}
+
+.login__input::placeholder {
+  color: #bbb;
+}
+
+.login__btn,
+.sign-up__btn,
+.logout__btn {
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  background-color: rgb(48, 104, 224);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: center;
+  padding: 0.7rem 2rem;
+  margin-top: 0.5rem;
+  border-radius: 50px;
+}
+.login__btn {
+  background-color: rgb(48, 104, 224);
+}
+
+.logout__btn {
+  display: none;
+  width: 10rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  background-color: orangered;
+  color: rgb(41, 40, 40);
+}
+
+.logout__btn:hover {
+  background-color: red;
+}
+.logout__btn:active {
+  transform: scale(0.98);
+}
+
+.login__btn:hover {
+  background-color: rgb(34, 92, 218);
+}
+
+.login__btn:active {
+  transform: scale(0.98);
+}
+
+/* Find Account */
+
+.find-accounts-nav {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 110rem;
+  margin: 0 auto;
+  display: none;
+}
+.find-accounts-nav .nav-content {
+  width: 30rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.find-accounts-nav .info-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.find-accounts-nav .welcome {
+  font-size: 1.9rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+.find-accounts-nav form {
+  margin-top: 2rem;
+  width: 40rem;
+  display: grid;
+  gap: 0.5rem;
+  row-gap: 3rem;
+  grid-template-columns: 30rem min-content;
+
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 1.5s ease-out;
+}
+.find-accounts-nav form > * {
+  width: 100%;
+}
+
+.find-accounts-nav .label-validation {
+  grid-column: 1 / span 2;
+  color: orangered;
+  font-size: 1.1rem;
+  height: 1.1rem;
+}
+
+.find-accounts-nav input {
+  grid-column: 1 / span 1;
+  border: none;
+  padding: 0.5rem 2rem;
+  font-size: 1.6rem;
+  font-family: inherit;
+  text-align: center;
+  border-radius: 10rem;
+  border: 1px solid #fff;
+  transition: all 0.3s;
+}
+
+/* if the login input has the class .border-red */
+.find-accounts-nav input.border-red {
+  border: 1px solid red;
+}
+
+.find-accounts-nav input:focus {
+  outline: none;
+  border: 1px solid #ccc;
+}
+
+.find-accounts-nav input::placeholder {
+  color: #bbb;
+}
+
+.find-accounts-nav .find-account__btn {
+  grid-column: 2 / span 1;
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  background-color: rgb(48, 104, 224);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: center;
+  padding: 0.7rem 1rem;
+  border-radius: 50px;
+  white-space: nowrap;
+}
+
+.find-accounts-nav .logout__btn {
+  display: block;
+  width: 10rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  background-color: orangered;
+  color: rgb(41, 40, 40);
+  display: none;
+}
+
+.find-accounts-nav .logout__btn:hover {
+  background-color: red;
+}
+.find-accounts-nav .logout__btn:active {
+  transform: scale(0.98);
+}
+
+.find-accounts-nav .login__btn:hover {
+  background-color: rgb(34, 92, 218);
+}
+
+.find-accounts-nav .login__btn:active {
+  transform: scale(0.98);
+}
+
+.sign-up__p {
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.sign-up__btn {
+  padding: 0.7rem 1rem;
+  white-space: nowrap;
+  background: green;
+}
+.sign-up__btn:hover {
+  background: rgb(1, 100, 1);
+}
+.sign-up__btn:active {
+  transform: scale(0.99);
+}
+
+.btn--sort:hover {
+  outline: none;
+  color: #777;
+}
+
+/* MAIN */
+.app {
+  position: relative;
+  max-width: 110rem;
+  margin: 4rem auto;
+  padding: 0 1rem 1rem;
+  display: grid;
+  grid-template-columns: 4fr 2.5fr;
+  grid-template-rows: auto repeat(5, 10.5rem) auto;
+  gap: 0.5rem;
+  display: none;
+  transition: all 1s;
+}
+
+/* balance box which includes welcome message, date & balance */
+.balance {
+  grid-column: 1 / span 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.7rem;
+  position: relative;
+}
+
+.balance .btn--sort {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.balance__label,
+.minus__label {
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: -0.2rem;
+}
+
+.balance__date {
+  font-size: 1.4rem;
+  color: #888;
+}
+
+.balance__value,
+.minus__value {
+  font-size: 4.5rem;
+  font-weight: 400;
+}
+
+.balance__value {
+  margin-right: 2.5rem;
+}
+
+.minus {
+  grid: 2 / span 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.minus__label {
+  font-size: 3.5rem;
+}
+
+.minus__value {
+  color: red;
+}
+
+/* MOVEMENTS */
+.movements {
+  grid-row: 2 / span 5;
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow-y: scroll;
+  position: relative;
+}
+
+/* Each movements */
+.movements__row {
+  padding: 2.25rem 4rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+.movements__type,
+.movements__date,
+.movements__value {
+  display: flex;
+  align-items: center;
+}
+
+.movements__sender,
+.movements__recipient,
+.movements__sender-account-no,
+.movements__recipient-account-no {
+  display: flex;
+  align-items: baseline;
+  margin-left: 1.5rem;
+  font-size: 1rem;
+
+  background-color: rgb(0, 153, 153);
+  border-radius: 3px;
+  padding: 0.2rem 0.5rem;
+  color: #fff;
+}
+
+.movements .to,
+.movements .from,
+.movements .account-no {
+  border-radius: 3px;
+  color: rgb(66, 65, 65);
+  font-size: 1.1rem;
+  margin-right: 0.3rem;
+  padding: 0 0.3rem;
+  margin: 0;
+}
+.movements__type {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #fff;
+  color: rgb(4, 0, 255);
+  padding: 0.1rem 1rem;
+  border-radius: 10rem;
+  margin-right: 2rem;
+}
+
+.movements__date {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #666;
+  margin-right: 0.5rem;
+}
+
+.movements__type--transfer,
+.movements__type--receipt {
+  background-image: linear-gradient(to top left, #ffb003, #ffcb03);
+}
+
+.movements__type--loan {
+  background-image: linear-gradient(to top left, #39b385, #9be15d);
+}
+.movements__type--deposit,
+.movements__type-paid-loan {
+  background-image: linear-gradient(to top left, #f3ba00, #fa6133);
+}
+
+.movements__type--withdrawal {
+  background-image: linear-gradient(to right bottom, #59d832, #ffc403);
+}
+
+.movements__value {
+  font-size: 1.7rem;
+  margin-left: auto;
+}
+
+/* SUMMARY -> total balance, out & interest*/
+.summary {
+  grid-row: 7 / 8;
+  /* display: flex;
+  align-items: baseline;
+  flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: repeat(8, auto);
+  grid-gap: 1rem;
+  padding: 0 0.3rem;
+  margin-top: 0.7rem;
+}
+
+.summary__label {
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.summary__value {
+  font-size: 2rem;
+}
+
+.summary__value--in,
+.summary__value--interest,
+.summary__value--loan {
+  color: #66c873;
+}
+
+.summary__value--withdrawal,
+.summary__value--transfer {
+  color: orangered;
+}
+.summary__value--receipt,
+.summary__value--deposit {
+  color: #6dd87b;
+}
+
+.summary__value--out {
+  color: #f5465d;
+}
+
+.btn--sort {
+  margin-left: auto;
+  border: none;
+  background: none;
+  font-size: 1.3rem;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+}
+
+/* OPERATIONS */
+.operation {
+  border-radius: 1rem;
+  padding: 0.7rem 3rem 0.2rem;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.operation--transfer {
+  background-image: linear-gradient(to top left, #ffb003, #ffcb03);
+}
+
+.operation--loan {
+  background-image: linear-gradient(to top left, #39b385, #9be15d);
+}
+
+.operation--deposit {
+  background-image: linear-gradient(to top left, #f3ba00, #fa6133);
+}
+
+.operation--withdrawal {
+  background-image: linear-gradient(to right bottom, #59d832, #ffc403);
+}
+
+.operation--close {
+  background-image: linear-gradient(to top left, #e52a5a, #ff585f);
+}
+
+.operation .label-validation {
+  margin: 0.5rem 0;
+  color: rgb(0, 17, 255);
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+  height: 1.3rem;
+}
+
+/* operation title */
+.operation h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.operation .form {
+  display: grid;
+  grid-template-columns: 2.5fr 2.5fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 0.4rem 1rem;
+}
+
+/* Exceptions for interest, withdrawal and Deposit */
+.form.form--loan,
+.from.form-deposit,
+.form.form--withdrawal {
+  grid-template-columns: 2.5fr 1fr 2.5fr;
+}
+.form__label--loan,
+.form__label--deposit,
+.form__label--withdrawal {
+  grid-row: 2;
+}
+/* End of exceptions */
+
+.form__input {
+  width: 100%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.4);
+  font-family: inherit;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #333;
+  padding: 0.3rem 1rem;
+  border-radius: 0.7rem;
+  transition: all 0.3s;
+}
+
+/* if the form input has the class .border-red */
+.form__input.border-red {
+  border: 1px solid red;
+}
+
+.form__input:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.form__label {
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.form__btn {
+  border: none;
+  border-radius: 0.7rem;
+  font-size: 1.8rem;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.form__btn:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.logout-timer {
+  padding: 0 0.3rem;
+  margin-top: 1.5rem;
+  text-align: right;
+  font-size: 1.25rem;
+}
+
+.timer {
+  font-weight: 600;
+}
+
+.popup {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+/* if popup has the class .show */
+.popup.show {
+  display: flex;
+}
+
+.popup .popup-box {
+  padding: 0 1rem;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: #fff;
+  height: 10rem;
+  min-width: 40rem;
+  max-width: 60rem;
+  border-radius: 0.5rem;
+}
+
+.popup .popup-box .popup-message {
+  font-size: 1.5rem;
+}
+
+.popup .btn-close {
+  color: orangered;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  height: 3rem;
+  width: 3rem;
+  font-size: 3rem;
+  color: orangered;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.popup .btn-close:hover {
+  color: red;
+}
+
+/*  */
+
+.sign-up__form-popup {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 50;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.sign-up__form-popup.show {
+  display: flex;
+}
+
+.sign-up__form {
+  background: yellowgreen;
+  width: 35rem;
+  display: grid;
+  gap: 2rem;
+  padding: 3rem;
+  border-radius: 5px;
+  position: relative;
+}
+
+.sign-up__form h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 1rem;
+  color: #000;
+}
+.sign-up__form .btn-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  font-size: 3rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+  color: orangered;
+}
+.sign-up__form .btn-close:hover {
+  color: red;
+}
+
+.sign-up__form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.sign-up__form .form-group label {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  color: #000;
+}
+
+.sign-up__form .form-group input {
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.sign-up__form .btn-submit {
+  cursor: pointer;
+  background: rgb(50, 36, 248);
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 0.7rem 2rem;
+  border-radius: 5px;
+  font-size: 1.5rem;
+}
+
+.sign-up__form .btn-submit:hover {
+  background: rgb(26, 10, 246);
+}
+
+.sign-up__form .btn-submit:active {
+  transform: scale(0.99);
+}
+
+.sign-up__form .star {
+  color: red;
+}

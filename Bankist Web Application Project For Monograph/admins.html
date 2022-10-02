@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/png" href="/icon.png" />
+
+    <!-- <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap"
+      rel="stylesheet"
+    /> -->
+
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Bankist</title>
+  </head>
+  <body>
+
+
+    <!-- Navbar -->
+    <nav id="navbar" class="bg-dark">
+      <div class="container">
+        <div class="logo-wrapper">
+          <img src="img/logo.png" alt="logo" class="logo">
+          <h1><span class="color-primary">Bankist</h1>
+        </div>
+        <ul>
+          <li class="nav-li"><a href="index.html">Home</a></li>
+          <li class="nav-li"><a href="admins.html" class="nav-link">Admins</a></li>
+          <li  class="nav-li"><a href="customers.html" class="nav-link">Customers</a></li>
+          <li  class="nav-li"><a href="#" class="nav-link">About</a></li>
+          <li  class="nav-li"><a href="#" class="nav-link">Services</a></li>
+         </ul>
+      </div>
+    </nav>
+
+    <!-- Sign Up form -->
+   <div class="sign-up__form-popup">
+    <form class='sign-up__form'>
+        <h2>Create New Account</h2>
+        <button class="btn btn-close">&times;</button>
+
+      <div class="form-group">
+        <label>Full Name   <span class="star">*</span></label>
+        <input type="text" class="input__sign-up__owner" placeholder='Enter Full Name'>
+      </div>
+      <div class="form-group">
+        <label>PIN   <span class="star">*</span></label>
+        <input type="password" class="input__sign-up__pin" placeholder='Enter PIN'>
+      </div>
+      <div class="form-group">
+        <label>Gender</label>
+        <input type="text" class="input__sign-up__gender" placeholder='Enter Gender'>
+      </div>
+      <div class="form-group">
+        <label>Age</label>
+        <input type="text" class="input__sign-up__age" placeholder='Enter Age'>
+      </div>
+      <div class="form-group">
+        <label>Contact Number</label>
+        <input type="text" class="input__sign-up__contact-no" placeholder='Enter Contact Number'>
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="text" class="input__sign-up__email" placeholder='Enter Email Address'>
+      </div>
+      <div class="form-group">
+        <label>Address</label>
+        <input type="text" class="input__sign-up__address" placeholder='Enter Your Address'>
+      </div>
+        <input type="submit" value="Submit" class="btn-submit">
+      </div>
+    </form>
+   </div>
+
+    <!-- Admin Login -->
+    <nav >
+      <div class="nav-content">
+        <div class="info-box">
+
+          <p class="welcome">Log in to get started</p>
+        </div>
+        <form class="login">
+	
+          <input
+            type="text"
+            placeholder="user"
+            class="login__input login__input--user"
+          />
+          <label class="label label-validation label-username"></label>
+
+          <input
+            type="password"
+            placeholder="password"
+            maxlength="4"
+            class="login__input login__input--password"
+          />
+          <label class="label label-validation label-password"></label>
+          <button class="login__btn">Log in</button>
+      
+        </form>
+      </div>
+      <button class="logout__btn admin-logout__btn">Log Out</button>
+    </nav>
+
+    <!-- Finding Customer Accounts -->
+    <nav class="find-accounts-nav">
+      <div class="nav-content">
+        <div class="info-box">
+          <p class="welcome find-account-welcome">Find the account to get started</p>
+        </div>
+        <form class="find-accounts">
+          <input
+            type="text"
+            placeholder="Account No"
+            class="find-account__input "
+          />
+          <button class="find-account__btn">Find Account</button>
+          <label class="label label-validation label-find-account">hi</label>
+          <p class="sign-up__p">Do not have account?</p>
+          <button class="sign-up__btn">Create Account</button>
+        </form>
+      </div>
+      <button class="logout__btn account-logout__btn">Log Out</button>
+    </nav>
+
+
+    <main class="app">
+      <!-- BALANCE -->
+      <div class="balance">
+        <div>
+          <p class="balance__label">Current balance</p>
+          <p class="balance__date">
+            As of <span class="date">05/03/2021</span>
+          </p>
+        </div>
+        <p class="balance__value">0000$</p>
+      </div>
+      <div class="minus">
+        <p class="minus__label">Minus</p>
+        <p class="minus__value">000$</p>
+      </div>
+      <!-- <button class="btn--sort">&downarrow; SORT</button> -->
+
+      <!-- MOVEMENTS -->
+      <div class="movements">
+        <div class="movements__row">
+          <div class="movements__type movements__type--deposit">2 deposit</div>
+          <div class="movements__date">3 days ago</div>
+          <div class ="movements__recipient-details">Ali</div>
+          <div class="movements__value">4 000$</div>
+        </div>
+        <div class="movements__row">
+          <div class="movements__type movements__type--withdrawal">
+            1 withdrawal
+          </div>
+          <div class="movements__date">24/01/2037</div>
+          <div class="movements__value">-378$</div>
+        </div>
+      </div>
+
+      <!-- SUMMARY -->
+      <div class="summary">
+        <div>
+          <p class="summary__label">Deposits</p>
+          <p class="summary__value summary__value--deposit">0000$</p>
+        </div>
+
+        <div>
+          <p class="summary__label">Receipts</p>
+          <p class="summary__value summary__value--receipt">0000$</p>
+        </div>
+        
+        <div>       
+          <p class="summary__label">In</p>
+          <p class="summary__value summary__value--in">0000$</p>
+        </div>
+        
+        <div>        
+          <p class="summary__label">Withdrawals</p>
+          <p class="summary__value summary__value--withdrawal">0000$</p>
+        </div>
+        
+
+        <div>        
+          <p class="summary__label">Transfers</p>
+          <p class="summary__value summary__value--transfer">0000$</p>
+        </div>
+
+        <div>        
+          <p class="summary__label">Out</p>
+          <p class="summary__value summary__value--out">0000$</p>
+        </div>
+        
+        <div>        
+          <p class="summary__label">Loans</p>
+          <p class="summary__value summary__value--loan">0000$</p>
+        </div>
+        <div> 
+          <p class="summary__label">Interest</p>
+          <p class="summary__value summary__value--interest">0000$</p>
+        </div>
+      </div>
+
+
+        <!-- OPERATION: Deposit -->
+        <div class="operation operation--deposit">
+          <h2>Deposit</h2>
+          <form class="form form--loan">
+            <input
+              type="number"
+              class="form__input form__input--deposit-amount"
+            />
+            <button class="form__btn form__btn--deposit">&rarr;</button>
+            <label class="form__label form__label--deposit">Amount</label>
+          </form>
+          <label class="label-validation label__deposit-message"> </label>
+        </div>
+
+          <!-- OPERATION: Withdrawal -->
+      <div class="operation operation--withdrawal">
+        <h2>Withdraw</h2>
+        <form class="form form--withdrawal">
+          <input
+            type="number"
+            class="form__input form__input--withdrawal-amount"
+          />
+          <button class="form__btn form__btn--withdrawal">&rarr;</button>
+          <label class="form__label form__label--withdrawal">Amount</label>
+        </form>
+        <label class="label-validation label__withdrawal-message"> </label>
+      </div>
+
+      <!-- OPERATION: LOAN -->
+      <div class="operation operation--loan">
+        <h2>Request loan</h2>
+        <form class="form form--loan">
+          <input type="number" class="form__input form__input--loan-amount" />
+          <button class="form__btn form__btn--loan">&rarr;</button>
+          <label class="form__label form__label--loan">Amount</label>
+        </form>
+        <label class="label-validation label__loan-message"> </label>
+      </div>
+
+        <!-- OPERATION: TRANSFERS -->
+        <div class="operation operation--transfer">
+          <h2>Transfer money</h2>
+          <form class="form form--transfer">
+            <input type="text" class="form__input form__input--to" />
+            <input
+              type="number"
+              class="form__input form__input--amount"
+              min="0"
+            />
+            <button class="form__btn form__btn--transfer">&rarr;</button>
+            <label class="form__label">Transfer to</label>
+            <label class="form__label">Amount</label>
+          </form>
+          <label class="label-validation label__transfer-message"> </label>
+        </div>
+
+    
+
+    
+
+      <!-- OPERATION: CLOSE -->
+      <div class="operation operation--close">
+        <h2>Close account</h2>
+        <form class="form form--close">
+          <input type="text" class="form__input form__input--user" />
+          <input
+            type="password"
+            maxlength="6"
+            class="form__input form__input--pin"
+          />
+          <button class="form__btn form__btn--close">&rarr;</button>
+          <label class="form__label">Confirm user</label>
+          <label class="form__label">Confirm PIN</label>
+        </form>
+        <label class="label-validation label__close-message"></label>
+      </div>
+
+      <!-- LOGOUT TIMER -->
+      <p class="logout-timer">
+        You will be logged out in <span class="timer">05:00</span>
+      </p>
+    </main>
+
+    <div class="popup">
+      <div class="popup-box" >
+        <p class="popup-message"></p>
+        <button class="btn-close">&times;</button>
+      </p>
+    </div>
+
+    <!-- <script src="js/script.js"></script> -->
+    <script src="js/script.js"></script>
+    <script src="js/admins.js"></script>
+  </body>
+</html>
